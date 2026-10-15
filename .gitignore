@@ -1,0 +1,14 @@
+.worktrees/
+node_modules/
+.next/
+next-env.d.ts
+playwright-report/
+test-results/
+.env
+*.local
+.npm-cache/
+.playwright-browsers/
+.superpowers/
+npm-install*.log
+run-npm-install.cmd
+*.tsbuildinfo
