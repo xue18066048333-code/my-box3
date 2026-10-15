@@ -1,0 +1,39 @@
+{
+  "name": "security-booking-web",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --configLoader runner",
+    "test:e2e": "playwright test --config playwright.config.ts",
+    "test:stage1": "node scripts/stage1-gate.mjs",
+    "test:db": "vitest run --configLoader runner",
+    "db:reset": "node scripts/db-reset.mjs"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "dependencies": {
+    "next": "16.4.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.9",
+    "@playwright/test": "1.56.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
+    "@types/node": "24.10.0",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "jsdom": "^30.1.2",
+    "typescript": "5.9.3",
+    "vitest": "4.0.6"
+  },
+  "allowScripts": {
+    "esbuild": true
+  }
+}
